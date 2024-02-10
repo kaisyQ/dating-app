@@ -6,15 +6,16 @@ on:
   pull_request:
     branches: [master, develop]
 
-jobs: 
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: 
+        with:
           node-version: 20
 
       - run: npm ci
-      - run: npm run test 
+      - run: export CHROME_BIN="C:\Program Files\Google\Chrome\Application\chrome.exe"
+      - run: npm run test --watch=false --no-progress
       - run: npm run build
