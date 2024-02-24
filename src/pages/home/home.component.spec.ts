@@ -9,7 +9,8 @@ describe('HomeComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-          declarations: [HomeComponent, AppButton]
+          declarations: [HomeComponent],
+          imports: [AppButton]
         })
         .compileComponents();
     });
