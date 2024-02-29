@@ -1,15 +1,15 @@
 import { TestBed } from '@angular/core/testing';
-import { ContentMainComponent} from "./content.main.component";
+import { ContentComponent} from "./content.component";
 
-describe('ContentMainComponent', () => {
+describe('ContentComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ContentMainComponent],
+      imports: [ContentComponent],
     }).compileComponents();
   });
 
   it('should create the main content', () => {
-    const fixture = TestBed.createComponent(ContentMainComponent);
+    const fixture = TestBed.createComponent(ContentComponent);
     const mainContent = fixture.componentInstance;
     expect(mainContent).toBeTruthy();
   });
