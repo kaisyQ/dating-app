@@ -18,6 +18,7 @@ module.exports = function (config) {
     jasmineHtmlReporter: {
       suppressAll: true // removes the duplicated traces
     },
+    // Если тесты запускаются не через chrome или yandex убрать эту строчку
     browsers: ['ChromeHeadless'],
     coverageReporter: {
       dir: require('path').join(__dirname, './coverage/dating-app'),

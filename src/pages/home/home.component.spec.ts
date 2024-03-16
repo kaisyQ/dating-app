@@ -1,8 +1,7 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { HomeComponent } from './home.component';
 import { AppButton } from '../../shared/components/button/button.component';
-import { RouterLink } from '@angular/router';
-
+import { provideRouter } from '@angular/router';
 describe('HomeComponent', () => {
 
     var component: HomeComponent;
@@ -10,7 +9,10 @@ describe('HomeComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-          imports: [AppButton, RouterLink]
+            imports: [HomeComponent, AppButton],
+            providers: [
+                provideRouter([]),
+            ]
         })
         .compileComponents();
     });
